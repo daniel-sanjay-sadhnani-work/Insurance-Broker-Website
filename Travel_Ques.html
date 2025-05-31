@@ -1,0 +1,264 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Daniel Sanjay Sadhnani
+ Student ID: 22013361
+ Class: C369-3D-E63C-A
+ Date/Time Last modified: 31/7/2023
+ 
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Questionnaire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         .plum-background{
+            background-color: plum;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column;
+        }
+        .d-flex-center {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           height: 100%;
+        }
+        .h1{
+            background-color: plum;
+            color: black;
+            font-family: italic;
+            font-size: 10px;
+            text-align: center;
+            width: 75%;
+        }
+        .h2{
+            background-color: plum;
+            color: black;
+            font-size: 10px;
+            text-align: center;
+            width: 75%;
+        }
+        .Return-Button{
+            background-color: rgb(246, 108, 108);
+            color: black;
+            border: none;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            margin-left: 8px;
+            position: absolute;
+            top: 1.5%;
+            right: 5%;
+        }
+        .Return-Button:hover{
+            opacity: 0.5;
+        }
+        .Button-Submit{
+            background-color: rgb(108, 108, 246);
+            color: black;
+            border: none;
+            height: 35px;
+            width: 200px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            margin-left: 8px;
+            position: absolute;
+            bottom: -50%;
+            right: 43%;
+        }
+        .Button-Submit:hover{
+            opacity: 0.5;
+        }
+        .form-group{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <body class="plum-background">
+        <div class="h1">
+        <h1>Questionnaire To Determine Suitability of Insurance Scheme</h1>
+        </div>
+        <a href="Insurance_Scheme.html" onclick="returnToInsuranceScheme()">
+        <button class="Return-Button">
+            Quit
+        </button>
+        </a>
+        <div class="h2">
+            <h2><b>Insurance Scheme: Travel</b></h2>
+        </div>
+        <div class="container mt-5">
+            <form id="radioForm">
+              <div class="form-group mb-3">
+                <label for="question1"><b>Question1: Have you or anyone else to be covered under this policy never been diagnosed with a pre-existing medical condition in the past [specified period, e.g., 6 months]?</b></label>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <input type="radio" name="question1" value="Yes"> Yes
+                      </label>
+                    </div>
+                    <div class="col-6 col-md-6">
+                          <input type="radio" name="question1" value="No"> No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="question2"><b>Question 2: Have you or anyone else to be covered never had any travel-related claims or incidents in the past [specified period, e.g., 2 years]?</b></label>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <input type="radio" name="question2" value="Yes"> Yes
+                      </label>
+                    </div>
+                    <div class="col-6 col-md-6">
+                          <input type="radio" name="question2" value="No"> No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="question3"><b>Question 3: Are you not traveling to any countries or regions with travel warnings issued by your government?</b></label>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <input type="radio" name="question3" value="Yes"> Yes
+                      </label>
+                    </div>
+                    <div class="col-6 col-md-6">
+                          <input type="radio" name="question3" value="No"> No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="question4"><b>Question 4: Do you not have any existing medical conditions nor are you taking any prescribed medications?</b></label>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <input type="radio" name="question4" value="Yes"> Yes
+                      </label>
+                    </div>
+                    <div class="col-6 col-md-6">
+                          <input type="radio" name="question4" value="No"> No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="question5"><b>Question 5: Will your trip not involve engaging in any hazardous activities, such as extreme sports or dangerous occupations?</b></label>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <input type="radio" name="question5" value="Yes"> Yes
+                      </label>
+                    </div>
+                    <div class="col-6 col-md-6">
+                          <input type="radio" name="question5" value="No"> No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="question6"><b>Question 6: Are you traveling against any medical advice or for the purpose of seeking medical treatment?</b></label>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <input type="radio" name="question6" value="Yes"> Yes
+                      </label>
+                    </div>
+                    <div class="col-6 col-md-6">
+                          <input type="radio" name="question6" value="No"> No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="question7"><b>Question 7: Have you already departed on your trip, or will you be departing during the policy's effective date?</b></label>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <input type="radio" name="question7" value="Yes"> Yes
+                      </label>
+                    </div>
+                    <div class="col-6 col-md-6">
+                          <input type="radio" name="question7" value="No"> No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="question8"><b>Question 8: Are you traveling for vacation or business purposes?</b></label>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <input type="radio" name="question8" value="Yes"> Yes
+                      </label>
+                    </div>
+                    <div class="col-6 col-md-6">
+                          <input type="radio" name="question8" value="No"> No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="question9"><b>Question 9: Will you not be participating in any competitive sports or events during your trip?</b></label>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <input type="radio" name="question9" value="Yes"> Yes
+                      </label>
+                    </div>
+                    <div class="col-6 col-md-6">
+                          <input type="radio" name="question9" value="No"> No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label for="question10"><b>Question 10: Are you not planning to engage in any high-risk activities, such as scuba diving, skydiving, or mountaineering?</b></label>
+                <div class="row">
+                    <div class="col-6 col-md-6">
+                        <input type="radio" name="question10" value="Yes"> Yes
+                      </label>
+                    </div>
+                    <div class="col-6 col-md-6">
+                          <input type="radio" name="question10" value="No"> No
+                        </label>
+                    </div>
+                </div>
+              </div>
+              <button type="button" class="Button-Submit" onclick="submitForm()">Submit Questionnaire</button>
+            </form>
+        </div>
+    </body>
+  
+    <script>
+function submitForm() {
+      const totalQuestions = document.querySelectorAll('input[type="radio"]').length;
+      const halfTotalQuestions = Math.ceil(totalQuestions / 4);
+      const yesCount = document.querySelectorAll('input[value="Yes"]:checked').length;
+
+      if (yesCount > halfTotalQuestions) {
+      alert("Successfully submitted");
+      localStorage.setItem("selectedInsurance", "Travel Insurance Scheme Suitability");
+      window.location.href = "Suitable.html";
+} else {
+  alert("Successfully submitted");
+  localStorage.removeItem("selectedInsurance");
+  window.location.href = "Not_Suitable.html";
+}
+     
+      
+}
+function returnToInsuranceScheme() {
+            localStorage.removeItem("selectedInsurance");
+            return true; 
+        }
+    </script>
+</body>
+</html>

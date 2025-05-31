@@ -1,0 +1,192 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Daniel Sanjay Sadhnani
+ Student ID: 22013361
+ Class: C369-3D-E63C-A
+ Date/Time Last modified: 31/7/2023
+ 
+    -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction History</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .plum-background{
+        background-color: plum;
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        flex-direction: column;
+    }
+    .h1{
+        background-color: plum;
+        color: black;
+        font-family: italic;
+        font-size: 40px;
+        text-align: center;
+        width: 35%;
+    }
+    .Return-Button{
+        background-color: rgb(246, 108, 108);
+        color: black;
+        border: none;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-left: 8px;
+        position: absolute;
+        top: 1.5%;
+        right: 5%;
+    }
+    .Return-Button:hover{
+        opacity: 0.5;
+    }
+    .lower{
+       margin-top: 100px;
+    }
+    .low-Button{
+        background-color: rgb(10, 171, 34);
+        color: black;
+        border: none;
+        height: 60px;
+        width: 70px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    .medium-Button{
+        background-color: orange;
+        color: black;
+        border: none;
+        height: 60px;
+        width: 70px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    .high-Button{
+        background-color: red;
+        color: black;
+        border: none;
+        height: 60px;
+        width: 70px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    </style>
+</head>
+<body>
+    <body class="plum-background">
+  
+    <div class="h1">
+    <h1>Transaction History</h1>
+    </div>
+    <a href="Home_Page.html">
+    <button class="Return-Button">
+        Return To Home Page
+    </button>
+    </a>
+    <div class="container lower">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Risk</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+    </tbody>
+    </table>
+  </div>
+    </body>
+    
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+        updateTransactionHistory();
+    });
+
+    function updateTransactionHistory() {
+        const userEmail = localStorage.getItem('userEmail');
+            const transactionHistory = JSON.parse(localStorage.getItem(userEmail + '_transactionHistory')) || [];
+      
+       
+
+        const table = document.querySelector(".table");
+        const tbody = table.querySelector("tbody");
+
+        
+        tbody.innerHTML = "";
+
+        
+        transactionHistory.forEach(transaction => {
+            const newRow = document.createElement("tr");
+            newRow.innerHTML = `
+                <td>${transaction.date}</td>
+                <td>${transaction.description}</td>
+                <td>$${transaction.amount}</td>
+                <td>${transaction.risk}</td>
+            `;
+            tbody.appendChild(newRow);
+        });
+    }
+
+    function getCurrentDate() {
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, "0");
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        const year = now.getFullYear();
+        return `${day}/${month}/${year}`;
+    }
+
+    const selectedInsurance = localStorage.getItem("selectedInsurance");
+    const paymentCompleted = localStorage.getItem("paymentCompleted");
+    
+    if (selectedInsurance && paymentCompleted) {
+        const riskOptions = ["Low Risk", "Medium Risk", "High Risk"];
+        const randomIndex = Math.floor(Math.random() * riskOptions.length);
+        const randomRisk = riskOptions[randomIndex];
+        const userEmail = localStorage.getItem('userEmail');
+
+        if(userEmail){
+        const newTransaction = {
+            date: getCurrentDate(),
+            description: selectedInsurance,
+            amount: 500,
+            risk: randomRisk
+        };
+        localStorage.removeItem("selectedInsurance");
+        newTransaction.fromSuccessfulPayment = true;
+       
+        const transactionHistory = JSON.parse(localStorage.getItem(userEmail + '_transactionHistory')) || [];
+            transactionHistory.push(newTransaction);
+            localStorage.setItem(userEmail + '_transactionHistory', JSON.stringify(transactionHistory));
+            updateTransactionHistory(); 
+
+        
+        localStorage.removeItem("paymentCompleted");
+        updateTransactionHistory();
+    }
+    }
+
+    </script>
+</body>
+</html>

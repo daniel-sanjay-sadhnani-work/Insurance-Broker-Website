@@ -1,0 +1,244 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Daniel Sanjay Sadhnani
+ Student ID: 22013361
+ Class: C369-3D-E63C-A
+ Date/Time Last modified: 31/7/2023
+ 
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         .plum-background{
+            background-color: plum;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column;
+        }
+        .d-flex-center {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           height: 100%;
+        }
+        .h1{
+            background-color: plum;
+            color: black;
+            font-family: italic;
+            font-size: 10px;
+            text-align: center;
+            width: 75%;
+        }
+        .h3{
+            background-color: plum;
+            color: black;
+            font-size: 20px;
+            text-align: center;
+        }
+        .p{
+            background-color: plum;
+            color: black;
+            font-size: 15px;
+            text-align: center;
+        }
+        .Return-Button{
+            background-color: rgb(246, 108, 108);
+            color: black;
+            border: none;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            margin-left: 8px;
+            position: absolute;
+            top: 1.5%;
+            right: 5%;
+        }
+        .Return-Button:hover{
+            opacity: 0.5;
+        }
+        .container {
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center; 
+            padding: 60px;
+        }
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        .cookie-banner p {
+            margin: 0;
+        }
+
+        .cookie-banner button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .cookie-banner button:hover {
+            background-color: #45a049;
+            opacity: 0.5;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay p {
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .overlay button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .overlay button:hover {
+            background-color: #45a049;
+            opacity: 0.5;
+        }
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <div class="h1">
+        <h1> Daniel Insurance Is An Insurance Recommendation Page For Those Interested In Personal Insurance</h1>
+    </div>
+    <body class="plum-background">
+        <a href="index.html">
+        <button class="Return-Button">
+            Logout
+        </button>
+        </a>
+        <div class="overlay" id="overlay">
+        <div class="cookie-banner" id="cookieBanner">
+            <p>This website uses cookies to ensure you get the best experience on our website. By continuing to use this site, you consent to the use of cookies.</p>
+            <button onclick="acceptCookies()">Got it!</button>
+        </div>
+        <div class="text-center">
+        <p>This website uses cookies to ensure you get the best experience on our website. By continuing to use this site, you consent to the use of cookies.</p>
+        <button onclick="acceptCookies()">Got it!</button>
+        </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="h3">
+                    <h3><a href="Insurance_Scheme.html">Insurance Plans</a></h3>
+                    </div>
+                    <div class="p">
+                    <p>
+                        Daniel Insurance is an Insurance Recommendation Website that helps people find insurance schemes 
+                        that is best suited for them.
+                        We have a wide variety of insurance schemes that people can choose with the help of a questionnare 
+                        that informs our customers whether it is suitable or not based on their responses.
+                        if your insurance scheme choice is deemed suitable , customers will proceed to make payment whereas
+                        if your insurance scheme choice is deemed not suitable , customers will have to make another insurance scheme choice.
+                    </p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="h3">
+                    <h3><a href="Fraud_Protection.html">Fraud Protection</a></h3>
+                    </div>
+                    <div class="p">
+                    <p>
+                        Daniel Insurance provides a Fraud Protection message which customers can access and Read
+                        to understand how to protect themselves.
+                        it includes Identity fraud which is the most common fraud scheme.
+                        it shares the 3 most common causes of identity fraud and the 3 ways to help protect customers
+                        from Identity fraud.
+                    </p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="h3">
+                    <h3><a href="Transaction_History.html">Transaction History</a></h3>
+                    </div>
+                    <div class="p">
+                    <p>
+                        Daniel Insurance provides a transaction history table of a customer which helps us detect Money
+                        Laundering based on their payment details.
+                        Based On acustomers transactions in the past month , the table will show its status to not only 
+                        the customers , but to us as well.
+                        With the use of icons , green indicating low risk of money laundering , orange indicating moderate 
+                        risk and red indicating high risk where we will be filing STRs if any high or moderate risk is detected.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script>
+      const userEmail = localStorage.getItem('userEmail');
+        const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+
+        const overlay = document.getElementById('overlay');
+        const content = document.getElementById('cookieBanner');
+        const container = document.querySelector('.container'); 
+
+        if (!cookiesAccepted) {
+            overlay.style.display = 'flex';
+            content.style.display = 'none';
+        } else {
+            overlay.style.display = 'none';
+            content.style.display = 'block';
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            overlay.style.display = 'none';
+            content.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

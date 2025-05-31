@@ -1,0 +1,236 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Daniel Sanjay Sadhnani
+ Student ID: 22013361
+ Class: C369-3D-E63C-A
+ Date/Time Last modified: 31/7/2023
+ 
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Plans</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         .plum-background{
+            background-color: plum;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column;
+        }
+        .d-flex-center {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           height: 100%;
+        }
+        .h1{
+            background-color: plum;
+            color: black;
+            font-family: italic;
+            font-size: 10px;
+            text-align: center;
+            width: 75%;
+        }
+        .p{
+            background-color: plum;
+            color: black;
+            font-size: 15px;
+            text-align: center;
+           
+        }
+        .Return-Button{
+            background-color: rgb(246, 108, 108);
+            color: black;
+            border: none;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            margin-left: 8px;
+            position: absolute;
+            top: 1.5%;
+            right: 5%;
+        }
+        .Return-Button:hover{
+            opacity: 0.5;
+        }
+        .container {
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center; 
+            padding: 60px;
+        }
+        .img{
+            height: 150px;
+            width: 200px;
+            border-radius: 20%;
+            animation: blinkYellow 2s infinite;
+        }
+        @keyframes blinkYellow {
+            0%, 100% {
+                box-shadow: 0 0 10px 5px yellow;
+            }
+            50% {
+                box-shadow: none;
+            }
+        }
+        .image-container {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            margin-right: 0;
+        }
+        .image-item {
+            margin: 10px;
+        }
+        .img:hover{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="h1">
+        <h1> Select An Insurance Scheme Suitable For You</h1>
+    </div>
+    <body class="plum-background">
+        <a href="Home_Page.html">
+        <button class="Return-Button">
+            Return To Home Page
+        </button>
+        </a>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="image-container">
+                        <a href="Home_Ques.html" data-insurance="home">
+                        <img src="House.JPG" alt="House" class="img">
+                        </a>
+                    </div>
+                    <div class="p">
+                        <p>Home</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="image-container">
+                        <a href="Accident_Ques.html" data-insurance="accident">
+                        <img src="Accident.JPG" alt="Accident" class="img">
+                        </a>
+                    </div>
+                    <div class="p">
+                        <p>Accident</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="image-container">
+                        <a href="Car_Ques.html" data-insurance="car">
+                        <img src="Car.JPG" alt="Car" class="img">
+                        </a>
+                    </div>
+                    <div class="p">
+                        <p>Car</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="image-container">
+                        <a href="Travel_Ques.html" data-insurance="travel">
+                        <img src="Travel.JPG" alt="Travel" class="img">
+                        </a>
+                    </div>
+                    <div class="p">
+                        <p>Travel</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="image-container">
+                        <a href="Maid_Ques.html" data-insurance="maid">
+                        <img src="Maid.JPG" alt="Maid" class="img">
+                        </a>
+                    </div>
+                    <div class="p">
+                        <p>Maid</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="image-container">
+                        <a href="Medical_Ques.html" data-insurance="medical">
+                        <img src="Medical.JPG" alt="Medical" class="img">
+                        </a>
+                    </div>
+                    <div class="p">
+                        <p>Medical</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="image-container">
+                        <a href="Study_Ques.html" data-insurance="study">
+                        <img src="Study.JPG" alt="Study" class="img">
+                        </a>
+                    </div>
+                    <div class="p">
+                        <p>Study</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="image-container">
+                        <a href="Sports_Ques.html" data-insurance="sports">
+                        <img src="Sports.JPG" alt="Sports" class="img">
+                        </a>
+                    </div>
+                    <div class="p">
+                        <p>Sports</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="image-container">
+                        <a href="Pets_Ques.html" data-insurance="pets">
+                        <img src="Pets.JPG" alt="Pets" class="img">
+                        </a>
+                    </div>
+                    <div class="p">
+                        <p>Pets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+    const insuranceOptions = {
+        home: "Home Insurance",
+        accident: "Accident Insurance",
+        car: "Car Insurance",
+        travel: "Travel Insurance",
+        maid: "Maid Insurance",
+        medical: "Medical Insurance",
+        study: "Study Insurance",
+        sports: "Sports Insurance",
+        pets: "Pets Insurance"
+        
+    };
+
+    const selectedInsurance = localStorage.getItem("selectedInsurance");
+
+    if (selectedInsurance) {
+        
+    }
+
+    const insuranceLinks = document.querySelectorAll(".image-container a");
+    insuranceLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            const insuranceType = this.getAttribute("data-insurance");
+            localStorage.setItem("selectedInsurance", insuranceOptions[insuranceType]);
+        });
+    });
+});
+                </script>
+</body>
+</html>

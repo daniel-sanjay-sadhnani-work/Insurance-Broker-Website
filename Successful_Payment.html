@@ -1,0 +1,134 @@
+<!--
+        I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Daniel Sanjay Sadhnani
+ Student ID: 22013361
+ Class: C369-3D-E63C-A
+ Date/Time Last modified: 31/7/2023
+ 
+    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful Payment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .plum-background{
+            background-color: plum;
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .h1{
+            background-color: plum;
+            color: black;
+            font-family: italic;
+            font-size: 20px;
+            text-align: center;
+            width: 35%;
+        }
+        .middle-Text{
+            background-color: plum;
+            color: black;
+            font-size: 30px;
+            text-align: center;
+            width: 100%;
+        }
+        .d-flex-center {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           height: 100%;
+        }
+        .Button-Home{
+            background-color: rgb(108, 108, 246);
+            color: black;
+            border: none;
+            height: 35px;
+            width: 200px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            margin-left: 8px;
+            position: absolute;
+            bottom: 5%;
+            left: 30%;
+           
+        }
+        .Button-Home:hover{
+            opacity: 0.5;
+        }
+        .Button-Feedback{
+            background-color: rgb(108, 108, 246);
+            color: black;
+            border: none;
+            height: 35px;
+            width: 200px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            margin-left: 8px;
+            position: absolute;
+            bottom: 5%;
+            right: 30%
+        }
+        .Button-Feedback:hover{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="h1">
+        <h1> Thank You! </h1>
+    </div>
+    <body class="plum-background">
+        <div class="d-flex-center">
+            <div class="text-center">
+                <div class="middle-Text">
+                    <p> Your Transaction was Successful! </p>
+                </div>  
+            </div>
+        </div>
+    </body>
+        <a href="Home_Page.html">
+        <button class=" Button-Home">
+            Return To Home Page
+        </button>
+        </a>
+        <a href="Feedback.html">
+        <button class="Button-Feedback">
+            Give Us Feedback
+        </button>
+        </a>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+    const selectedInsurance = localStorage.getItem("selectedInsurance");
+    if (selectedInsurance) {
+        const middleTextElement = document.querySelector(".middle-Text"); 
+        if (middleTextElement) {
+                middleTextElement.textContent = "Your Transaction for " + selectedInsurance + " was Successful!";
+            }
+
+    }
+     
+     localStorage.setItem("selectedInsurance", selectedInsurance);
+
+
+});
+
+        </script>
+</body>
+</html>
